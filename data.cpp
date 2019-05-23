@@ -19,9 +19,9 @@ char *file_read(char *filename)
 	return data;
 }
 
-void file_write(void)
+void file_write(char *data)
 {
-//	arr[index] = recvtext.c_str();
+	printf("[%s]\n", data);
 }
 
 /*

@@ -2,6 +2,9 @@
 #include <zmq.hpp>
 
 #include "conf.h"
+#include "data.h"
+#include "json.h"
+#include "db.h"
 
 void send(config_t config, char *data)
 {
@@ -35,13 +38,12 @@ void recv(config_t config)
 		receiver.recv(&message);
 
 		printf("%s\n", (char*)message.data());
+		char *data = (char*)message.data();
 
-/*
-		json_parser();
+		json_parser(data);
 
-		db_write();
+		db_write(data);
 
-		file_write();	
-*/
+		file_write(data);	
 	}
 }
