@@ -20,7 +20,7 @@ void send(config_t config, char *data)
 	printf("[%s]\n", data);
 }
 
-void recv(void)
+void recv(config_t config)
 {
         zmq::context_t context(1);
 

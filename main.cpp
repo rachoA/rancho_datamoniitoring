@@ -26,13 +26,11 @@ void send_mode(void)
 
 void recv_mode(void)
 {
-/*
 	config_t config;
 	
 	read_conf(&config);
 
 	recv(config);
-*/
 }
 
 void help_print(char *program) 
